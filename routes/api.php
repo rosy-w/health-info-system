@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\API\ClientController;
 use App\Http\Controllers\API\HealthProgramController;
+use App\Http\Controllers\LiveSearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,3 +44,5 @@ Route::post('/login', function (Request $request) {
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+//live search
+Route::get('/livesearch', [LiveSearchController::class, 'search']);
