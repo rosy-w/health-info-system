@@ -11,7 +11,7 @@ This solution should allow a doctor (system user) to do the following:
 5.	View a client's profile, including the programs they are enrolled in.
 6.	Expose the client profile via an API, so that other systems can retrieve this information.
 
-##Features
+## Features
 
 - Dashboard with metrics and quick actions
 - Manage clients, health programs, and enrollments
@@ -19,6 +19,7 @@ This solution should allow a doctor (system user) to do the following:
 - Responsive UI (Tailwind CSS + Font Awesome)
 - Live search (Alpine.js)
 - REST API (Sanctum)
+- Live interaction (Livewire)
 
 ---
 
