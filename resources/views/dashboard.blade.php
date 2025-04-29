@@ -36,13 +36,16 @@
 {{-- Recent Clients Widget --}}
 <div class="bg-white p-6 rounded-lg shadow border">
     <h3 class="text-lg font-bold mb-4 text-[#2C62EA]">Recent Clients</h3>
-    <ul class="divide-y">
+    @can('view client')
+    @livewire('recent-clients-table')
+    @endcan
+    {{--<ul class="divide-y">
         @foreach($recentClients as $client)
             <li class="flex justify-between py-2">
                 <span>{{ $client->name }}</span>
                 <span class="text-sm text-gray-500">{{ $client->created_at->format('d M Y') }}</span>
             </li>
         @endforeach
-    </ul>
+    </ul>--}}
 </div>
 @endsection
