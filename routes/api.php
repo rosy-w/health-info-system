@@ -46,3 +46,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 //live search
 Route::get('/livesearch', [LiveSearchController::class, 'search']);
+

@@ -32,7 +32,7 @@
             </tr>
             @empty
             <tr>
-                <td colspan="3" class="p-2 text-gray-500 text-center">No recent clients found.</td>
+                <td colspan="3" class="p-2 text-gray-500 text-center">No clients found.</td>
             </tr>
             @endforelse
         </tbody>

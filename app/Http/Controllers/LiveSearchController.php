@@ -13,7 +13,7 @@ class LiveSearchController extends Controller
         $query = $request->input('q');
         $clients = $programs = collect([]);
 
-        if (strlen($query) > 1) {
+        if (strlen($query) > 0) {
             $clients = Client::where('name', 'like', "%{$query}%")->take(5)->get(['id','name']);
             $programs = HealthProgram::where('name', 'like', "%{$query}%")->take(5)->get(['id','name']);
         }

@@ -21,34 +21,34 @@
     {{-- Sidebar --}}
     <aside class="w-64 bg-white shadow-md hidden md:flex flex-col">
         <div class="h-16 flex items-center justify-center border-b">
-            <span class="text-[#2C62EA] font-bold text-lg">Health System</span>
+            <span class="text-[#3D518C] font-bold text-lg">Health System</span>
         </div>
         <nav class="flex-1 p-4 space-y-2">
             <a href="{{ route('dashboard') }}"
-               class="flex items-center px-4 py-3 rounded hover:bg-[#E3F2FD] transition">
-                <i class="fa-solid fa-house text-[#2C62EA] text-lg mr-3"></i>
+               class="flex items-center px-4 py-3 rounded hover:bg-[#ABD2FA] transition">
+                <i class="fa-solid fa-house text-[#3D518C] text-lg mr-3"></i>
                 Dashboard
             </a>
             <a href="{{ route('clients.index') }}"
-               class="flex items-center px-4 py-3 rounded hover:bg-[#E3F2FD] transition">
-                <i class="fa-solid fa-users text-[#2C62EA] text-lg mr-3"></i>
+               class="flex items-center px-4 py-3 rounded hover:bg-[#ABD2FA] transition">
+                <i class="fa-solid fa-users text-[#3D518C] text-lg mr-3"></i>
                 Clients
             </a>
             <a href="{{ route('health-programs.index') }}"
-               class="flex items-center px-4 py-3 rounded hover:bg-[#E3F2FD] transition">
-                <i class="fa-solid fa-notes-medical text-[#2C62EA] text-lg mr-3"></i>
+               class="flex items-center px-4 py-3 rounded hover:bg-[#ABD2FA] transition">
+                <i class="fa-solid fa-notes-medical text-[#3D518C] text-lg mr-3"></i>
                 Health Programs
             </a>
             <a href="{{ route('enrollments.index') }}"
-               class="flex items-center px-4 py-3 rounded hover:bg-[#E3F2FD] transition">
-                <i class="fa-solid fa-clipboard text-[#2C62EA] text-lg mr-3"></i>
+               class="flex items-center px-4 py-3 rounded hover:bg-[#ABD2FA] transition">
+                <i class="fa-solid fa-clipboard text-[#3D518C] text-lg mr-3"></i>
                 Enrollments
             </a>
         </nav>
     </aside>
     <div class="flex-1 min-h-screen flex flex-col">
         {{-- Navbar --}}
-        <header class="bg-[#2C62EA] text-white p-4 shadow-md">
+        <header class="bg-[#3D518C] text-white p-4 shadow-md">
             <div class="container mx-auto flex justify-between items-center">
                 <!-- Alpine.js livesearch -->
                 <div x-data="searchDropdown()" class="relative w-full max-w-md">
@@ -71,11 +71,11 @@
 
                         <template x-if="results.clients.length">
                             <div>
-                                <div class="px-3 py-2 border-b font-semibold text-[#2C62EA]">Clients</div>
+                                <div class="px-3 py-2 border-b font-semibold text-[#3D518C]">Clients</div>
                                 <template x-for="client in results.clients" :key="client.id">
                                     <a
                                         :href="`/clients/${client.id}`"
-                                        class="block hover:bg-[#E3F2FD] px-4 py-2 border-b last:border-b-0 transition text-[#2C62EA]"
+                                        class="block hover:bg-[#ABD2FA] px-4 py-2 border-b last:border-b-0 transition text-[#3D518C]"
                                         x-text="client.name"
                                         @click="open = false"
                                     ></a>
@@ -85,11 +85,11 @@
 
                         <template x-if="results.programs.length">
                             <div>
-                                <div class="px-3 py-2 border-b font-semibold text-[#2C62EA]">Health Programs</div>
+                                <div class="px-3 py-2 border-b font-semibold text-[#3D518C]">Health Programs</div>
                                 <template x-for="program in results.programs" :key="program.id">
                                     <a
                                         :href="`/health-programs/${program.id}`"
-                                        class="block hover:bg-[#E3F2FD] px-4 py-2 border-b last:border-b-0 transition"
+                                        class="block hover:bg-[#ABD2FA] px-4 py-2 border-b last:border-b-0 transition"
                                         x-text="program.name"
                                         @click="open = false"
                                     ></a>
@@ -103,7 +103,7 @@
                     <form action="{{ route('logout') }}" method="POST" class="inline">
                         @csrf
                         <button type="submit" class="bg-[#FFA726] px-3 py-1 rounded hover:bg-[#fb8c00]">
-                        <i class="fa-solid fa-logout text-[#2C62EA] text-lg mr-3"></i>
+                        <i class="fa-solid fa-logout text-[#3D518C] text-lg mr-3"></i>
                         </button>
                     </form>
                 </div>
