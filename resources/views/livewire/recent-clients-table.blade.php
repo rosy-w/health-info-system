@@ -25,7 +25,7 @@
                 <td class="p-2">{{ $client->email }}</td>
                 <td class="p-2 text-sm text-gray-500">{{ $client->created_at->format('d M Y') }}</td>
                 <td>
-                    <a class="btn btn-sm btn-dark" href="" title= "Edit Client">
+                    <a class="btn btn-sm btn-dark" href="{{ route('clients.edit', $client) }}" title= "Edit Client">
                         <i class="fas fa-edit"></i>
                     </a>
                 </td>

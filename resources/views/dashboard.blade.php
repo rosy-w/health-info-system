@@ -4,9 +4,9 @@
 <div class="mb-8 flex items-center justify-between">
     <h2 class="text-2xl font-bold text-[#2C62EA]">Dashboard</h2>
     <div class="flex  gap-4">
-    <a href="{{ route('clients.create') }}" class="bg-[#2C62EA] hover:bg-[#1a42ae] text-white px-5 py-2 rounded font-semibold shadow transition">+ Create Client</a>
-    <a href="{{ route('health-programs.create') }}" class="bg-white hover:bg-[#388e3c] text-[#2C62EA] px-5 py-2 rounded font-semibold shadow transition">+ Create Program</a>
-</div>
+        <a href="{{ route('clients.create') }}" class="bg-[#2C62EA] hover:bg-[#1a42ae] text-white px-5 py-2 rounded font-semibold shadow transition">+ Create Client</a>
+        <a href="{{ route('health-programs.create') }}" class="bg-white hover:bg-[#388e3c] text-[#2C62EA] px-5 py-2 rounded font-semibold shadow transition">+ Create Program</a>
+    </div>
 </div>
 
 {{-- Widget Row --}}
