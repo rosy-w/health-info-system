@@ -12,8 +12,8 @@
         <tbody>
             @forelse($clients as $client)
             <tr class="border-b hover:bg-gray-50">
-                <td class="p-2">{{ $client->name }}</td>
-                <td class="p-2">
+                <td class="p-3">{{ $client->name }}</td>
+                <td class="p-3">
                     @forelse($client->healthPrograms as $program)
                         <span class="inline-block bg-blue-100 text-blue-700 text-xs font-medium px-2 py-1 rounded mr-1">
                             {{ $program->name }}
@@ -22,11 +22,17 @@
                         <span class="text-gray-400 text-sm">None</span>
                     @endforelse
                 </td>
-                <td class="p-2">{{ $client->email }}</td>
-                <td class="p-2 text-sm text-gray-500">{{ $client->created_at->format('d M Y') }}</td>
+                <td class="p-3">{{ $client->email }}</td>
+                <td class="p-3 text-sm text-gray-500">{{ $client->created_at->format('d M Y') }}</td>
                 <td>
-                    <a class="btn btn-sm btn-dark" href="{{ route('clients.edit', $client) }}" title= "Edit Client">
-                        <i class="fas fa-edit"></i>
+                    <a class="btn btn-sm" href="{{ route('clients.edit', $client) }}" title= "Edit Client">
+                        <i class="p-2 fas fa-edit"></i>
+                    </a>
+                    <a class="btn btn-sm" href="{{ route('clients.show', $client->id) }}" title= "View Client">
+                        <i class="p-2 fas fa-eye"></i>
+                    </a>
+                    <a class="btn btn-sm" href="" title= "Delete Client">
+                        <i class="p-2 fas fa-trash"></i>
                     </a>
                 </td>
             </tr>

@@ -4,9 +4,9 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use Livewire\WithPagination;
-use App\Models\Client;
+use App\Models\HealthProgram;
 
-class ClientsTable extends Component
+class HealthProgramsTable extends Component
 {
     use WithPagination;
 
@@ -19,11 +19,13 @@ class ClientsTable extends Component
 
     public function render()
     {
-        $clients = Client::query()
+        $programs = HealthProgram::query()
+            ->withCount('enrollments')
             ->orderBy('name', 'asc')
             ->paginate(10);
 
-        return view('livewire.clients-table', ['clients' => $clients]);
+        return view('livewire.health-programs-table', [
+            'programs' => $programs,
+        ]);
     }
 }
-

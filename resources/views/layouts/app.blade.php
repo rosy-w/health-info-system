@@ -89,7 +89,7 @@
                                 <template x-for="program in results.programs" :key="program.id">
                                     <a
                                         :href="`/health-programs/${program.id}`"
-                                        class="block hover:bg-[#ABD2FA] px-4 py-2 border-b last:border-b-0 transition"
+                                        class="block hover:bg-[#ABD2FA] px-4 py-2 border-b last:border-b-0 transition text-[#3D518C]"
                                         x-text="program.name"
                                         @click="open = false"
                                     ></a>
