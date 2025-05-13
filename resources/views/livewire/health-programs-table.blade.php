@@ -24,6 +24,16 @@
                        title="Edit Enrollments">
                        <i class="fas fa-edit"></i>
                     </a>
+                    @can('delete program')
+                        <form action="{{ route('health-programs.destroy', $program->id) }}" method="POST" style="display: inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="text-red-600 hover:text-red-900" title="Delete Program" onclick="return confirm('Are you sure you want to delete this program?')">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </form>
+       
+                    @endcan
                 </td>
             </tr>
         @empty
