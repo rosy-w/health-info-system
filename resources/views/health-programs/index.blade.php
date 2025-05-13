@@ -9,7 +9,7 @@
     </div>
     @endcan
     @if (session('success'))
-    {{--success message after creation of client --}}
+    {{--success message after creation/deletion of program --}}
         <div class="mb-6 max-w-3xl mx-auto bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded shadow">
             {{ session('success') }}
         </div>

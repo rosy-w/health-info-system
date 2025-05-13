@@ -28,6 +28,14 @@
                     <a class="btn btn-sm btn-dark" href="{{ route('clients.edit', $client) }}" title= "Edit Client">
                         <i class="fas fa-edit"></i>
                     </a>
+                    <a class="btn btn-sm" href="{{ route('clients.show', $client->id) }}" title= "View Client">
+                        <i class="p-2 fas fa-eye"></i>
+                    </a>
+                    @can('delete client')
+                    <a class="btn btn-sm" href="" title= "Delete Client">
+                        <i class="p-2 fas fa-trash text-red"></i>
+                    </a>
+                    @endcan
                 </td>
             </tr>
             @empty
